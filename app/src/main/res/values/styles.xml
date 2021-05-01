@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Changes" parent="Theme.AppCompat.Light.NoActionBar">
+<!--        color of appbar-->
+        <item name="colorPrimary">@color/primaryLightColor</item>
+<!--        color of status bar-->
+        <item name="colorPrimaryDark">@color/primaryColor</item>
+        <item name="colorAccent">@color/primaryTextColor</item>
+<!--        font-->
+        <item name="android:fontFamily">@font/sourcecodepro_regular</item>
+
+    </style>
+
+    <style name="ToolBarTitle" parent="@android:style/TextAppearance">
+
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:shadowColor">#4D000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">8</item>
+        <item name="android:shadowRadius">12</item>
+
+
+    </style>
+</resources>
