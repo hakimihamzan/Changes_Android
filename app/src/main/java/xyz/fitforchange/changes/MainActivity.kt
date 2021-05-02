@@ -3,6 +3,7 @@ package xyz.fitforchange.changes
 import android.os.Bundle
 import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val toolbar: androidx.appcompat.widget.Toolbar = findViewById(R.id.toolbar)
+        //customize toolbar title
         toolbar.setTitleTextAppearance(baseContext, R.style.ToolBarTitle)
         setSupportActionBar(toolbar)
 
@@ -38,18 +40,16 @@ class MainActivity : AppCompatActivity() {
             override fun getItemCount(): Int {
                 return 5
             }
-
-
         }
 
         val tabLayout = findViewById<TabLayout>(R.id.tab_layout)
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
                         when (position) {
-                0 -> tab.icon = getDrawable(R.drawable.list_wout)
-                1 -> tab.icon = getDrawable(R.drawable.calendar)
-                2 -> tab.icon = getDrawable(R.drawable.clock)
-                3 -> tab.icon = getDrawable(R.drawable.scribble)
-                4 -> tab.icon = getDrawable(R.drawable.checkin)
+                0 -> tab.icon = ContextCompat.getDrawable(this, R.drawable.list_wout)
+                1 -> tab.icon = ContextCompat.getDrawable(this, R.drawable.calendar)
+                2 -> tab.icon = ContextCompat.getDrawable(this, R.drawable.clock)
+                3 -> tab.icon = ContextCompat.getDrawable(this, R.drawable.scribble)
+                4 -> tab.icon = ContextCompat.getDrawable(this, R.drawable.checkin)
             }
         }.attach()
 
