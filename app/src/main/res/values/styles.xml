@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Changes" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Changes" parent="Theme.MaterialComponents.DayNight.NoActionBar">
 <!--        color of appbar-->
         <item name="colorPrimary">@color/primaryLightColor</item>
 <!--        color of status bar-->
